@@ -18,7 +18,7 @@ void swap(stack_t **stack, unsigned int ln)
 		++stack_size;
 		node = node->prev;
 	}
-	
+
 	if (stack_size < 2)
 	{
 		printf("L<%d>: can't swap, stack too short\n", ln);
