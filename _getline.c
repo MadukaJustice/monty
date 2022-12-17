@@ -27,7 +27,7 @@ int getline(char **lineptr, int fd, unsigned int *offset)
 	*lineptr = malloc(sizeof(char) * (i + 1));
 	if (*lineptr == NULL)
 	{
-		printf("%s\n", "Error: malloc failed");
+		fprintf(stderr, "%s\n", "Error: malloc failed");
 		exit(EXIT_FAILURE);
 	}
 	i = 0;

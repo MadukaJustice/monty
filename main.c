@@ -19,7 +19,7 @@ int main(int ac, char *argv[])
 
 	if (ac == 1)
 	{
-		printf("%s\n", "USAGE: monty file");
+		fprintf(stderr, "%s\n", "USAGE: monty file");
 		exit(EXIT_FAILURE);
 	}
 	load_opcodes(opcodes, OPS);
@@ -28,7 +28,7 @@ int main(int ac, char *argv[])
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		printf("Error: Can't open file <%s>\n", argv[1]);
+		fprintf(stderr, "Error: Can't open file <%s>\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	f_exec(opcodes, OPS, fd, lineptr);

@@ -12,7 +12,7 @@ void push(stack_t **stack, unsigned int val)
 	node = malloc(sizeof(stack_t));
 	if (node == NULL)
 	{
-		printf("%s\n", "Error: malloc failed");
+		fprintf(stderr, "%s\n", "Error: malloc failed");
 		exit(EXIT_FAILURE);
 	}
 	node->n = val;

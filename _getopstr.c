@@ -29,7 +29,7 @@ void get_optstr(char **optstr, char *line)
 	if (*optstr == NULL)
 	{
 		free(line);
-		printf("Error: malloc failed");
+		fprintf(stderr, "Error: malloc failed");
 		exit(EXIT_FAILURE);
 	}
 	i = 0;

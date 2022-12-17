@@ -43,7 +43,7 @@ void f_exec(instruction_t opcodes[], unsigned int len, int fd, char *lineptr)
 		}
 		if (i == len)
 		{
-			printf("L<%u>: unknow instruction <%s>\n", line_no, opcode);
+			fprintf(stderr, "L<%u>: unknow instruction <%s>\n", line_no, opcode);
 			free(opstr);
 			exit(EXIT_FAILURE);
 		}
@@ -78,7 +78,7 @@ unsigned int line_no, unsigned int it)
 			val = strtok(NULL, "");
 			if (val == NULL)
 			{
-				printf("L<%u>: usage: push integer\n", line_no);
+				fprintf(stderr, "L<%u>: usage: push integer\n", line_no);
 				free(opstr);
 				exit(EXIT_FAILURE);
 			}
