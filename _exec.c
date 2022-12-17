@@ -30,6 +30,7 @@ void f_exec(instruction_t opcodes[], unsigned int len, int fd, char *lineptr)
 		if (opcode == NULL)
 		{
 			++line_no;
+			free(opstr);
 			continue;
 		}
 		i = 0;
@@ -74,7 +75,7 @@ unsigned int line_no, unsigned int it)
 	{
 		if (strcmp(opcode, "push") == 0)
 		{
-			val = strtok(NULL, " ");
+			val = strtok(NULL, "");
 			if (val == NULL)
 			{
 				printf("L<%u>: usage: push integer\n", line_no);
