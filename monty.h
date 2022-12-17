@@ -47,6 +47,7 @@ void nop(stack_t **stack, unsigned int ln);
 int getline(char **lineptr, int fd, unsigned int *);
 void load_opcodes(instruction_t opcodes[], int size);
 void get_optstr(char **opstr, char *line);
+void f_exec(instruction_t [], unsigned int, int, char *);
 
 extern stack_t *stack;
 extern unsigned int stack_size;

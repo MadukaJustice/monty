@@ -2,7 +2,8 @@
 
 /**
  * get_optstr - gets the opcode string from a line
- * @opstr: a pointer to a pointer to char
+ * @optstr: a pointer to a pointer to char
+ * @line: a line of text
  */
 void get_optstr(char **optstr, char *line)
 {
