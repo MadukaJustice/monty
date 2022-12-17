@@ -18,6 +18,5 @@ void pop(stack_t **stack, unsigned int ln)
 	*stack = node->prev;
 	if (*stack != NULL)
 		(*stack)->next = NULL;
-	--stack_size;
 	free(node);
 }

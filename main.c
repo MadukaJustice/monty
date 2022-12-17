@@ -4,7 +4,6 @@
 #define OPS 7 /*length of the opcodes*/
 
 stack_t *stack = NULL;
-unsigned int stack_size = 0;
 
 /**
  * main - run program

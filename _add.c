@@ -9,7 +9,15 @@ void add(stack_t **stack, unsigned int ln)
 {
 	stack_t *node;
 	int sum;
+	unsigned int stack_size;
 
+	stack_size = 0;
+	node = *stack;
+	while (node != NULL)
+	{
+		++stack_size;
+		node = node->prev;
+	}
 	if (stack_size < 2)
 	{
 		printf("L<%d>: can't add, stack too short\n", ln);

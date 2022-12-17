@@ -21,5 +21,4 @@ void push(stack_t **stack, unsigned int val)
 	if (*stack != NULL)
 		(*stack)->next = node;
 	*stack = node;
-	++stack_size;
 }
