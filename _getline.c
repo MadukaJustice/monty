@@ -3,13 +3,13 @@
 
 
 /**
- * getline - gets a line of text from a buffer
+ * _getline - gets a line of text from a buffer
  * @lineptr: a pointer to a pointer to char
  * @fd: the file to getline from
  * @offset: pointer to file offset
  * Return: number of chars read, otherwise -1
  */
-int getline(char **lineptr, int fd, unsigned int *offset)
+int _getline(char **lineptr, int fd, unsigned int *offset)
 {
 	char buf[BUFSIZE];
 	int nread;
