@@ -22,7 +22,7 @@ void f_exec(instruction_t opcodes[], unsigned int len, int fd, char *lineptr)
 	line_no = 1;
 	opstr = NULL;
 	do {
-		nread = getline(&lineptr, fd, &offset);
+		nread = _getline(&lineptr, fd, &offset);
 		if (nread == -1 || nread == 0)
 			break;
 		get_optstr(&opstr, lineptr);
