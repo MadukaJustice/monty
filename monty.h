@@ -44,7 +44,7 @@ void pop(stack_t **stack, unsigned int ln);
 void push(stack_t **stack, unsigned int val);
 void swap(stack_t **stack, unsigned int ln);
 void nop(stack_t **stack, unsigned int ln);
-int getline(char **lineptr, int fd, unsigned int *);
+int _getline(char **lineptr, int fd, unsigned int *);
 void load_opcodes(instruction_t opcodes[], int size);
 void get_optstr(char **opstr, char *line);
 void f_exec(instruction_t [], unsigned int, int, char *);
